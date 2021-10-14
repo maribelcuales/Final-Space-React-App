@@ -38,7 +38,15 @@ function App() {
         {
           data.map((character) => (
             <Card className={classes.card}>
-              <CardMedia className={classes.media} image={character.img_url} />
+              <CardMedia className={classes.media} ima0ge={character.img_url} />
+              <CardContent>
+                <Typography color="primary" variant="h5">
+                  {character.name}
+                </Typography>
+                <Typography color="textSecondary" variant="subtitle2">
+                  {character.status}
+                </Typography>
+              </CardContent>
             </Card>
           ))
         }
