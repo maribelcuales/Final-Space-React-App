@@ -27,6 +27,8 @@ function App() {
       .then((data) => setData(data));
   }, []);
 
+  const classes = useStyles(); 
+
   return (
     <div>
       <Container>
@@ -35,14 +37,8 @@ function App() {
         </Typography>
         {
           data.map((character) => (
-            <Card
-              style={{
-                maxWidth: 345,
-                boxShadow: "0 5px 8px 0 rgba(0, 0, 0, 0.3)",
-                backgroundColor: "#fafafa",
-              }}
-            >
-              <CardMedia style={{ height: "300px" }} image={character.img_url} />
+            <Card className={classes.card}>
+              <CardMedia className={classes.media} image={character.img_url} />
             </Card>
           ))
         }
