@@ -42,17 +42,22 @@ function App() {
         </Typography>
         <Grid container spacing={3}>
           {data.map((character) => (
-            <Card className={classes.card}>
-              <CardMedia className={classes.media} image={character.img_url} />
-              <CardContent>
-                <Typography color="primary" variant="h5">
-                  {character.name}
-                </Typography>
-                <Typography color="textSecondary" variant="subtitle2">
-                  {character.status}
-                </Typography>
-              </CardContent>
-            </Card>
+            <Grid item xs={12} sm={4} key={character.id}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.media}
+                  image={character.img_url}
+                />
+                <CardContent>
+                  <Typography color="primary" variant="h5">
+                    {character.name}
+                  </Typography>
+                  <Typography color="textSecondary" variant="subtitle2">
+                    {character.status}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
           ))}
         </Grid>
       </Container>
