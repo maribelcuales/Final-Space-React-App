@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { CardMedia } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   card: {
@@ -13,10 +14,9 @@ const useStyles = makeStyles({
     backgroundColor: "#fafafa",
   },
   media: {
-    height: "300px"
+    height: "300px",
   },
 });
-
 
 function App() {
   const [data, setData] = useState([]);
@@ -27,18 +27,23 @@ function App() {
       .then((data) => setData(data));
   }, []);
 
-  const classes = useStyles(); 
+  const classes = useStyles();
 
   return (
     <div>
       <Container>
-        <Typography color="textPrimary" gutterBottom variant="h2" align="center">
+        <Typography
+          color="textPrimary"
+          gutterBottom
+          variant="h2"
+          align="center"
+        >
           Final Space React App with Material UI
         </Typography>
-        {
-          data.map((character) => (
+        <Grid container spacing={3}>
+          {data.map((character) => (
             <Card className={classes.card}>
-              <CardMedia className={classes.media} ima0ge={character.img_url} />
+              <CardMedia className={classes.media} image={character.img_url} />
               <CardContent>
                 <Typography color="primary" variant="h5">
                   {character.name}
@@ -48,8 +53,8 @@ function App() {
                 </Typography>
               </CardContent>
             </Card>
-          ))
-        }
+          ))}
+        </Grid>
       </Container>
     </div>
   );
