@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import Container from "@material-ui/core/Container";
 
 function App() {
   const [data, setData] = useState([]);
@@ -8,10 +9,12 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
-  
+
   return (
-    <div> 
-      <h1>Hello hello!</h1> 
+    <div>
+      <Container>
+        <h1>Hello hello!</h1>
+      </Container>
     </div>
   );
 }
