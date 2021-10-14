@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Container from "@material-ui/core/Container";
+import { Typography } from "@material-ui/core";
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,7 +14,9 @@ function App() {
   return (
     <div>
       <Container>
-        <h1>Hello hello!</h1>
+        <Typography color="textPrimary" gutterBottom variant="h2" align="center">
+          Final Space React App with Material UI
+        </Typography>
       </Container>
     </div>
   );
