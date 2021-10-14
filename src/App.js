@@ -4,6 +4,19 @@ import { Typography } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { CardMedia } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  card: {
+    maxWidth: 345,
+    boxShadow: "0 5px 8px 0 rgba(0, 0, 0, 0.3)",
+    backgroundColor: "#fafafa",
+  },
+  media: {
+    height: "300px"
+  },
+});
+
 
 function App() {
   const [data, setData] = useState([]);
