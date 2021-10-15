@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Container from "@material-ui/core/Container";
+import { Typography } from "@material-ui/core";
 
 const Episodes = () => {
   const [data, setData] = useState([]);
@@ -10,8 +12,12 @@ const Episodes = () => {
   }, []);
 
   return (
-    <h1>Final Space Episodes</h1>
-  )
-}
+    <div>
+      <Container>
+        <Typography>Final Space Episodes</Typography>
+      </Container>
+    </div>
+  );
+};
 
-export default Episodes; 
+export default Episodes;
