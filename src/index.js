@@ -9,6 +9,8 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route path="/episodes" component={Episodes} />
+      <Route path="/c0haracter" component={Character} />
+      <Route path="/location" component={Location} />
       <Route path="/" component={App} />
     </Switch>
   </Router>,
