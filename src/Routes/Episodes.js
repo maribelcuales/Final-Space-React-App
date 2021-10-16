@@ -14,7 +14,8 @@ const Episodes = () => {
   return (
     <div>
       <Container>
-        <Typography>Final Space Episodes</Typography>
+        <Typography>Final Space List of Episodes</Typography>
+
       </Container>
     </div>
   );
