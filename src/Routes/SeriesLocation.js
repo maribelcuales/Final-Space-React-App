@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Container from "@material-ui/core/Container";
 import { Typography } from "@material-ui/core";
 
-const Location = () => {
+const SeriesLocation = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -20,4 +20,4 @@ const Location = () => {
   );
 };
 
-export default Location;
+export default SeriesLocation; 
